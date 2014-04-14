@@ -4,20 +4,18 @@ use warnings;
 
 sub getWordAtIndex {
     my ($class, $index) = @_;
-    if ($index == 1) {
-        return 1;
+
+    if ($index % 3 == 0 && $index % 5 == 0) {
+        return 'fizzbuzz'
     }
-    elsif ($index == 2) {
-        return 2;
-    }
-    elsif ($index == 3) {
+    elsif ($index % 3 == 0) {
         return 'fizz';
     }
-    elsif ($index == 4) {
-        return 4;
-    }
-    elsif ($index == 5) {
+    elsif ($index % 5 == 0) {
         return 'buzz';
+    }
+    else {
+        return $index;
     }
 }
 
